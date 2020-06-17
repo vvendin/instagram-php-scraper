@@ -1514,7 +1514,6 @@ class Instagram
                 if (
                     $response->code === static::HTTP_BAD_REQUEST
                     && isset($response->body->message)
-                    && $response->body->message == 'checkpoint_required'
                     && !empty($twoStepVerificator)
                 ) {
                     if ($response->body->message == 'checkpoint_required') {
